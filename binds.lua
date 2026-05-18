@@ -40,6 +40,7 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl --player=spotify next"))
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("pactl set-sink-volume 0 +5%"))
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("pactl set-sink-volume 0 -5%"))
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("pactl set-sink-mute 0 toggle"))
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl --player=spotify play-pause"))
 hl.bind("SUPER + XF86AudioRaiseVolume", hl.dsp.exec_cmd("playerctl --player=spotify volume 0.01+"))
 hl.bind("SUPER + XF86AudioLowerVolume", hl.dsp.exec_cmd("playerctl --player=spotify volume 0.01-"))
 
