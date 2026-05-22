@@ -56,3 +56,5 @@ hl.define_submap("resize-window", function()
     hl.bind("j", hl.dsp.window.resize({ x = 0, y = 10, relative = true, window = "activewindow" }), { repeating = true })
     hl.bind("RETURN", hl.dsp.submap("reset"))
 end)
+
+hl.bind("SUPER + CTRL + q", hl.dsp.exec_cmd("hyprlock"))
