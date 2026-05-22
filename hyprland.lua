@@ -14,7 +14,9 @@ hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 
-
+hl.curve("quic", { type = "bezier", points = { { 0, 1 }, { 1, 1 } } })
+hl.curve("smooth", { type = "bezier", points = { { .21, .47 }, { .86, .52 } } })
+hl.curve("ease-in", { type = "bezier", points = { { .42, 0 }, { 1, 1 } } })
 hl.curve("zSnails-animation", { type = "bezier", points = { { 0.49, -0.43 }, { 0.48, 1.59 } } })
 hl.config({
     plugin = {
@@ -87,12 +89,13 @@ hl.config({
     }
 })
 
-hl.animation({ leaf = "windows", enabled = true, speed = 5, bezier = "zSnails-animation" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "zSnails-animation" })
-hl.animation({ leaf = "border", enabled = true, speed = 10, bezier = "zSnails-animation" })
-hl.animation({ leaf = "borderangle", enabled = true, speed = 8, bezier = "zSnails-animation" })
+
+hl.animation({ leaf = "windows", enabled = true, speed = 2, bezier = "quic", style="gnomed" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "zSnails-animation", style="slide" })
+hl.animation({ leaf = "border", enabled = true, speed = 1, bezier = "linear" })
+hl.animation({ leaf = "borderangle", enabled = false, speed = 8, bezier = "zSnails-animation" })
 hl.animation({ leaf = "fade", enabled = true, speed = 7, bezier = "zSnails-animation" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 6, bezier = "zSnails-animation" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "quic", style = "slide" })
 
 require("./monitors")
 
