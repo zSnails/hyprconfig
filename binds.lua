@@ -44,8 +44,8 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl --player=spotify play-pause"
 hl.bind("SUPER + XF86AudioRaiseVolume", hl.dsp.exec_cmd("playerctl --player=spotify volume 0.01+"), { locked = true })
 hl.bind("SUPER + XF86AudioLowerVolume", hl.dsp.exec_cmd("playerctl --player=spotify volume 0.01-"), { locked = true })
 
-hl.bind("SUPER + mouse:272", hl.dsp.window.drag())
-hl.bind("SUPER + mouse:273", hl.dsp.window.resize())
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 hl.dsp.submap("reset")
 hl.bind("SUPER + R", hl.dsp.submap("resize-window"))
