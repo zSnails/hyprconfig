@@ -90,12 +90,13 @@ hl.config({
     }
 })
 
-
-hl.animation({ leaf = "windows", enabled = true, speed = 2, bezier = "quic", style="gnomed" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "zSnails-animation", style="slide" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 5, bezier = "zSnails-animation" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 5, bezier = "zSnails-animation" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "quic", style = "gnomed" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 5, bezier = "quic", style = "gnomed" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 5, bezier = "quic", style = "gnomed" })
 hl.animation({ leaf = "border", enabled = true, speed = 1, bezier = "linear" })
 hl.animation({ leaf = "borderangle", enabled = false, speed = 8, bezier = "zSnails-animation" })
-hl.animation({ leaf = "fade", enabled = true, speed = 7, bezier = "zSnails-animation" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "quic", style = "slide" })
 
 require("./monitors")
