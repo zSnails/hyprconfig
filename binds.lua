@@ -3,7 +3,7 @@ local terminal = "kitty"
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal), { transparent = true })
 hl.bind("SUPER + W", hl.dsp.window.close("activewindow"))
 hl.bind("SUPER + ALT + Q", hl.dsp.exit())
-hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region -o screenshots"))
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("sherlock"))
 hl.bind("SUPER + F", hl.dsp.window.fullscreen("activewindow"))
 hl.bind("SUPER + S", hl.dsp.window.float({ window = "activewindow" }))
