@@ -1,3 +1,5 @@
+local USER = os.getenv("USER")
+
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("GBM_BACKEND", "nvidia-drm")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
@@ -108,7 +110,17 @@ require("./monitors")
 hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
     hl.exec_cmd("hyprpm reload -n")
-    hl.exec_cmd("awww-daemon")
+
+    -- TODO: use a better check for the current system, I'll probably add local modular configuration
+    if USER == "ayaka" then
+        local hyprglaze_path = "/home/ayaka/.local/bin/hyprglaze"
+        local hyprglaze_shader_path = "/home/ayaka/projects/zig/hyprglaze/shaders/balatro.frag"
+        hl.exec_cmd(hyprglaze_path .. " --shader " .. hyprglaze_shader_path .. " --output HDMI-A-1")
+        hl.exec_cmd(hyprglaze_path .. " --shader " .. hyprglaze_shader_path .. " --output HDMI-A-2")
+    elseif USER == "z" then
+        hl.exec_cmd("awww-daemon")
+    end
+
     hl.exec_cmd("hyprctl dispatch workspace 1")
     hl.exec_cmd("waybar")
 end)
