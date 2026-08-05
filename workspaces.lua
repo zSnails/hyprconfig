@@ -1,10 +1,14 @@
-hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-1", persistent = true })
-hl.workspace_rule({ workspace = "2", monitor = "HDMI-A-1", persistent = true })
-hl.workspace_rule({ workspace = "3", monitor = "HDMI-A-1", persistent = true })
-hl.workspace_rule({ workspace = "4", monitor = "HDMI-A-1", persistent = true })
-hl.workspace_rule({ workspace = "5", monitor = "HDMI-A-1", persistent = true })
-hl.workspace_rule({ workspace = "6", monitor = "HDMI-A-2", persistent = true })
-hl.workspace_rule({ workspace = "7", monitor = "HDMI-A-2", persistent = true })
-hl.workspace_rule({ workspace = "8", monitor = "HDMI-A-2", persistent = true })
-hl.workspace_rule({ workspace = "9", monitor = "HDMI-A-2", persistent = true })
-hl.workspace_rule({ workspace = "10", monitor = "HDMI-A-2", persistent = true })
+local monitors = hl.get_monitors()
+local last_assigned_workspace_id = 0
+local workspaces_per_monitor = 10 / #monitors
+
+for _, monitor in ipairs(monitors) do
+    for _ = 1, workspaces_per_monitor, 1 do
+        last_assigned_workspace_id = last_assigned_workspace_id + 1
+        hl.workspace_rule({
+            workspace = "" .. last_assigned_workspace_id .. "",
+            monitor = monitor.name,
+            persistent = true,
+        })
+    end
+end
