@@ -96,6 +96,8 @@ hl.config({
     }
 })
 
+hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
+
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 5, bezier = "zSnails-animation" })
 hl.animation({ leaf = "fadeOut", enabled = true, speed = 5, bezier = "zSnails-animation" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "quic", style = "gnomed" })
