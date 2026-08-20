@@ -121,6 +121,7 @@ hl.on("hyprland.start", function()
         hl.exec_cmd(hyprglaze_path .. " --shader " .. hyprglaze_shader_path .. " --output HDMI-A-2")
     elseif USER == "z" then
         hl.exec_cmd("awww-daemon")
+        hl.exec_cmd("awww restore")
     end
 
     hl.exec_cmd("hyprctl dispatch workspace 1")
