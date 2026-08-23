@@ -116,7 +116,7 @@ hl.on("hyprland.start", function()
     -- TODO: use a better check for the current system, I'll probably add local modular configuration
     if USER == "ayaka" then
         local hyprglaze_path = "/home/ayaka/.local/bin/hyprglaze"
-        local hyprglaze_shader_path = "/home/ayaka/projects/zig/hyprglaze/shaders/balatro.frag"
+        local hyprglaze_shader_path = "/home/ayaka/wallpapers/balatro.frag"
         hl.exec_cmd(hyprglaze_path .. " --shader " .. hyprglaze_shader_path .. " --output HDMI-A-1")
         hl.exec_cmd(hyprglaze_path .. " --shader " .. hyprglaze_shader_path .. " --output HDMI-A-2")
     elseif USER == "z" then
