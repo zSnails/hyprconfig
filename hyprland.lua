@@ -21,6 +21,10 @@ hl.env("_JAVA_AWT_WM_NONREPARENTING", "1")
 hl.env("JAVA_TOOL_OPTIONS",
     "-Dsun.java2d.xrender=false -Dsun.java2d.pmoffscreen=false -Dsun.java2d.opengl=false -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true")
 
+hl.env("MOZ_ENABLE_WAYLAND", "1")
+hl.env("NVD_BACKEND", "direct")
+hl.env("MOZ_DISABLE_RDD_SANDBOX", "1")
+
 hl.curve("quic", { type = "bezier", points = { { 0, 1 }, { 1, 1 } } })
 hl.curve("smooth", { type = "bezier", points = { { .21, .47 }, { .86, .52 } } })
 hl.curve("ease-in", { type = "bezier", points = { { .42, 0 }, { 1, 1 } } })
