@@ -51,8 +51,10 @@ hl.window_rule {
     match = {
         focus = true
     },
-    ["hyprbars:bar_color"] = "rgb(00f5ff)",
-    ["hyprbars:title_color"] = "rgb(2b2b3b)",
+    ["hyprbars:bar_color"] = "rgb(ff66aa)",
+    ["hyprbars:title_color"] = "rgb(17151c)",
+}
+
 hl.layer_rule {
     name = "swaync-osu-slide",
     match = {

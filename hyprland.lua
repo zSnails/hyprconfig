@@ -33,13 +33,16 @@ hl.curve("osu-lazer", { type = "bezier", points = { {0.23, 1}, {0.32, 1} } })
 hl.config({
     plugin = {
         hyprbars = {
-            bar_height = 24,
-            bar_color = "rgb(ff006e)",
-            bar_text_font = "Orbitron",
+            bar_height = 26,
+            bar_color = "rgb(24212b)",
+            bar_text_font = "SF Pro Display",
+            bar_text_size = 11,
+            bar_text_weight = "semibold",
             bar_text_align = "left",
+            bar_padding = 12,
             bar_part_of_window = true,
             col = {
-                text = "rgba(ffffffff)"
+                text = "rgb(8f8a99)"
             }
         }
     },
@@ -54,8 +57,8 @@ hl.config({
         gaps_out = 5,
         border_size = 1,
         col = {
-            active_border = "rgb(00f5ff)",
-            inactive_border = "rgb(ff006e)"
+            active_border = "rgb(ff66aa)",
+            inactive_border = "rgb(24212b)"
         },
         resize_on_border = false,
         allow_tearing = false,
