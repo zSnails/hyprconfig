@@ -120,6 +120,7 @@ hl.animation({ leaf = "layers", enabled = true, style = "slide", speed = 5.5, be
 hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
     hl.exec_cmd("hyprpm reload -n")
+    hl.exec_cmd("sherlock --daemonize")
 
     -- TODO: use a better check for the current system, I'll probably add local modular configuration
     if USER == "ayaka" then
