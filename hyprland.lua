@@ -80,7 +80,8 @@ hl.config({
         enabled = true,
     },
     dwindle = {
-        preserve_split = true
+        preserve_split = true,
+        smart_resizing = true,
     },
     master = {
         new_status = "master"
@@ -111,8 +112,6 @@ hl.animation({ leaf = "border", enabled = true, speed = 1, bezier = "linear" })
 hl.animation({ leaf = "borderangle", enabled = false, speed = 8, bezier = "zSnails-animation" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "quic", style = "slide" })
 
-require("./monitors")
-
 hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
     hl.exec_cmd("hyprpm reload -n")
@@ -136,6 +135,7 @@ hl.on("config.reloaded", function()
     hl.dispatch(hl.dsp.exec_cmd("notify-send -u low 'Hyprland Config' 'Configuration reloaded'"))
 end)
 
+require("./monitors")
 require("./workspaces")
 require("./binds")
 require("./windows")
