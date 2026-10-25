@@ -62,3 +62,11 @@ hl.layer_rule {
     },
     animation = "slide left"
 }
+
+hl.layer_rule {
+    name = "sherlock-slide-custom",
+    match = {
+        namespace = "^sherlock$",
+    },
+    animation = "slide right"
+}
