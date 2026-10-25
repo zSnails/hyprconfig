@@ -104,14 +104,14 @@ hl.config({
 
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
 
-hl.animation({ leaf = "fadeIn", enabled = true, speed = 5, bezier = "zSnails-animation" })
-hl.animation({ leaf = "fadeOut", enabled = true, speed = 5, bezier = "zSnails-animation" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "quic", style = "gnomed" })
-hl.animation({ leaf = "windowsMove", enabled = true, speed = 5, bezier = "quic", style = "gnomed" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 5, bezier = "quic", style = "gnomed" })
-hl.animation({ leaf = "border", enabled = true, speed = 1, bezier = "linear" })
-hl.animation({ leaf = "borderangle", enabled = false, speed = 8, bezier = "zSnails-animation" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "quic", style = "slide" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 5, bezier = "osu-lazer" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 5, bezier = "osu-lazer" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "osu-lazer", style = "gnomed" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 5, bezier = "osu-lazer", style = "gnomed" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 5, bezier = "osu-lazer", style = "gnomed" })
+hl.animation({ leaf = "border", enabled = true, speed = 1, bezier = "osu-lazer" })
+hl.animation({ leaf = "borderangle", enabled = false, speed = 8, bezier = "osu-lazer" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 5.5, bezier = "osu-lazer", style = "slidefadevert" })
 hl.animation({ leaf = "layers", enabled = true, style = "slide", speed = 5.5, bezier = "osu-lazer"})
 
 hl.on("hyprland.start", function()
