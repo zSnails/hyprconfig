@@ -53,4 +53,10 @@ hl.window_rule {
     },
     ["hyprbars:bar_color"] = "rgb(00f5ff)",
     ["hyprbars:title_color"] = "rgb(2b2b3b)",
+hl.layer_rule {
+    name = "swaync-osu-slide",
+    match = {
+        namespace = "^swaync-control-center$"
+    },
+    animation = "slide left"
 }

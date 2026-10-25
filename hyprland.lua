@@ -29,6 +29,7 @@ hl.curve("quic", { type = "bezier", points = { { 0, 1 }, { 1, 1 } } })
 hl.curve("smooth", { type = "bezier", points = { { .21, .47 }, { .86, .52 } } })
 hl.curve("ease-in", { type = "bezier", points = { { .42, 0 }, { 1, 1 } } })
 hl.curve("zSnails-animation", { type = "bezier", points = { { 0.49, -0.43 }, { 0.48, 1.59 } } })
+hl.curve("osu-lazer", { type = "bezier", points = { {0.23, 1}, {0.32, 1} } })
 hl.config({
     plugin = {
         hyprbars = {
@@ -111,6 +112,7 @@ hl.animation({ leaf = "windowsIn", enabled = true, speed = 5, bezier = "quic", s
 hl.animation({ leaf = "border", enabled = true, speed = 1, bezier = "linear" })
 hl.animation({ leaf = "borderangle", enabled = false, speed = 8, bezier = "zSnails-animation" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "quic", style = "slide" })
+hl.animation({ leaf = "layers", enabled = true, style = "slide", speed = 5.5, bezier = "osu-lazer"})
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
