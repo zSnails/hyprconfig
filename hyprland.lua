@@ -25,10 +25,6 @@ hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.env("NVD_BACKEND", "direct")
 hl.env("MOZ_DISABLE_RDD_SANDBOX", "1")
 
-hl.curve("quic", { type = "bezier", points = { { 0, 1 }, { 1, 1 } } })
-hl.curve("smooth", { type = "bezier", points = { { .21, .47 }, { .86, .52 } } })
-hl.curve("ease-in", { type = "bezier", points = { { .42, 0 }, { 1, 1 } } })
-hl.curve("zSnails-animation", { type = "bezier", points = { { 0.49, -0.43 }, { 0.48, 1.59 } } })
 hl.curve("osu-lazer", { type = "bezier", points = { {0.23, 1}, {0.32, 1} } })
 hl.config({
     plugin = {
