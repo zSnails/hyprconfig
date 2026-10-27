@@ -60,7 +60,9 @@ hl.layer_rule {
     match = {
         namespace = "^swaync-control-center$"
     },
-    animation = "slide left"
+    animation = "slide left",
+    dim_around = true,
+    blur = true,
 }
 
 hl.layer_rule {
@@ -68,5 +70,8 @@ hl.layer_rule {
     match = {
         namespace = "^sherlock$",
     },
+    blur = true,
+    blur_popups = true,
+    dim_around = true,
     animation = "slide right"
 }
