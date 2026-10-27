@@ -75,3 +75,11 @@ hl.layer_rule {
     dim_around = true,
     animation = "slide right"
 }
+
+hl.layer_rule {
+    name = "hyprshot-no-animation",
+    match = {
+        namespace ="^selection$",
+    },
+    no_anim = true
+}
